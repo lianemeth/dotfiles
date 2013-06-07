@@ -122,3 +122,5 @@ alias rmpyc='rm `find . -name "*.pyc"`; rm `find . -name ".DS_Store"`'
 export APPENGINE_LIB=~/py/google_appengine
 
 export PATH=~/py/google_appengine:$PATH
+
+function pygrep { grep -nr --include="*.py" "$1" .; }
