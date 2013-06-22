@@ -124,3 +124,9 @@ export APPENGINE_LIB=~/py/google_appengine
 export PATH=~/py/google_appengine:$PATH
 
 function pygrep { grep -nr --include="*.py" "$1" .; }
+
+alias vi='vim'
+
+export VISUAL=vim
+
+export EDITOR=vim
