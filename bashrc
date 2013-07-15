@@ -107,6 +107,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 function activate { source ~/py/venvs/"$1"/bin/activate; }
+
 function devserver {
 	source ~/py/venvs/"$1"/bin/activate;
 	cd ~/py/my/"$1"/;
@@ -121,12 +122,20 @@ alias rmpyc='rm `find . -name "*.pyc"`; rm `find . -name ".DS_Store"`'
 
 export APPENGINE_LIB=~/py/google_appengine
 
-export PATH=~/py/google_appengine:$PATH
+#export PATH=~/py/google_appengine:$PATH
+
+export PATH=~/go/google_appengine:$PATH
 
 function pygrep { grep -nr --include="*.py" "$1" .; }
+
+function rbgrep { grep -nr --include="*.rb" "$1" .; }
 
 alias vi='vim'
 
 export VISUAL=vim
 
 export EDITOR=vim
+
+export PATH=/usr/bin/aws/eb/linux/python2.7:$PATH
+
+export PS1='\[\033[01;32m\]\h\[\033[01;34m\] \w\[\033[31m\]$(__git_ps1 "(%s)") \[\033[01;34m\]$\[\033[00m\] '
