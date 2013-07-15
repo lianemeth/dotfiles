@@ -11,6 +11,11 @@ if exists("b:did_ftplugin") | finish | endif
 let s:save_cpo = &cpo
 set cpo-=C
 
+" Let's pep8 PHP
+setlocal softtabstop=4
+setlocal tabstop=4
+setlocal shiftwidth=4
+
 " Define some defaults in case the included ftplugins don't set them.
 let s:undo_ftplugin = ""
 let s:browsefilter = "HTML Files (*.html, *.htm)\t*.html;*.htm\n" .
