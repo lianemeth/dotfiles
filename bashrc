@@ -130,6 +130,8 @@ function pygrep { grep -nr --include="*.py" "$1" .; }
 
 function rbgrep { grep -nr --include="*.rb" "$1" .; }
 
+function erbgrep { grep -nr --include="*.erb" "$1" .; }
+
 alias vi='vim'
 
 export VISUAL=vim
