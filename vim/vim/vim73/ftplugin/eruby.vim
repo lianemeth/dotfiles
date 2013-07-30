@@ -101,4 +101,6 @@ let b:undo_ftplugin = "setl cms< "
 
 let &cpo = s:save_cpo
 
-" vim: nowrap sw=2 sts=2 ts=8:
+set nowrap sw=2 sts=2 ts=8
+set nosmarttab
+set expandtab
