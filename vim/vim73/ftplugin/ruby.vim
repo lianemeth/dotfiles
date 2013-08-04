@@ -12,6 +12,9 @@
 " ----------------------------------------------------------------------------
 
 " Only do this when not done yet for this buffer
+
+setlocal expandtab
+
 if (exists("b:did_ftplugin"))
   finish
 endif
@@ -270,5 +273,6 @@ endfunction
 " locations of plugin directories, etc., as there are several options, and it
 " differs on Windows.  Email gsinclair@soyabean.com.au if you need help.
 "
-
-" vim: nowrap sw=2 sts=2 ts=8:
+" setlocal sw=2 
+" setlocal sts=2
+" setlocal ts=8

@@ -82,7 +82,7 @@ if has("gui_win32") && !exists("b:browsefilter")
 		       \ "All Files (*.*)\t*.*\n"
 endif
 
-" troquei o pep8 pelo meu pyvalidate
+"comeca aqui o pep8
 " To change mapping, just put
 " let g:pep8_map='whatever'
 " in your .vimrc
@@ -96,6 +96,8 @@ function! <SID>Pep8()
   set grepformat&vim
   set grepformat&vim
   let &grepformat = '%f:%l:%m'
+  " nobody cares about pep8 128
+  " let &grepprg = 'pep8 --repeat --ignore=E128'
   let &grepprg = 'pyvalidate'
   if &readonly == 0 | update | endif
   silent! grep! %
@@ -119,7 +121,7 @@ function! <SID>Pep8()
 		  hi GreenBar term=reverse ctermfg=white ctermbg=darkgreen guifg=white guibg=darkgreen
 	  endif
 	  echohl GreenBar
-	  echomsg "PEP8 correct"
+	  echomsg "OK"
 	  echohl None
 	  cclose
   endif
@@ -138,7 +140,6 @@ else
           \ g:pep8_map ." is taken and a replacement was not assigned."
   endif
 endif
-
 
 
 map  [[   :PBoB<CR>
