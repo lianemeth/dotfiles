@@ -118,7 +118,7 @@ alias tput="trash-put"
 
 function whichpackage { dpkg -S $(which "$1");  }
 
-alias rmpyc='rm `find . -name "*.pyc"`; rm `find . -name ".DS_Store"`'
+alias rmpyc='find . -name "*.pyc" -delete'
 
 export APPENGINE_LIB=~/py/google_appengine
 
