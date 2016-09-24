@@ -9,6 +9,18 @@
 " This line should not be removed as it ensures that various options are
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
+" start vundle
+set nocompatible
+filetype off 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+call vundle#begin('~/some/path/here')
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'highwaynoise/chuck.vim'
+call vundle#end()
+filetype plugin indent on
 
 " Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
