@@ -14,11 +14,12 @@ set nocompatible
 filetype off 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-call vundle#begin('~/some/path/here')
+call vundle#begin('~/.vim/vundle_depot')
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'highwaynoise/chuck.vim'
+Plugin 'vim-airline/vim-airline'
 call vundle#end()
 filetype plugin indent on
 
@@ -63,3 +64,12 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+set backspace=indent,eol,start
+
+" tab configuration
+set hidden
+let g:airline#extensions#tabline#enabled = 1
+
+nmap <leader>h :bprevious<CR>
+nmap <leader>l :bnext<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>
