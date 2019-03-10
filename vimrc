@@ -20,6 +20,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'highwaynoise/chuck.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 call vundle#end()
 filetype plugin indent on
 
@@ -58,6 +61,7 @@ set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
 set hidden		" Hide buffers when they are abandoned
 set mouse=a		" Enable mouse usage (all modes)
+set clipboard=unnamed
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
@@ -73,3 +77,5 @@ let g:airline#extensions#tabline#enabled = 1
 nmap <leader>h :bprevious<CR>
 nmap <leader>l :bnext<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
+let g:syntastic_python_checkers = ['flake8']
+set tabstop=4 shiftwidth=4 expandtab
