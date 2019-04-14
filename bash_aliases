@@ -1,3 +1,4 @@
+alias prettyjson='python -m json.tool'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -GFh'
