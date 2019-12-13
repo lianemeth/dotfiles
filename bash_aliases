@@ -7,6 +7,7 @@ alias vi='vim'
 alias grep='grep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 alias egrep='egrep --colour=auto'
+alias prettyjson='python -m json.tool'
 
 function pygrep { grep -nr --include="*.py" "$1" .; }
 
