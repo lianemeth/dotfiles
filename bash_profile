@@ -33,18 +33,10 @@ export CLICOLORS=1
 
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
-# Setting PATH for Python 3.4
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 PATH="/usr/local/Cellar/openssl/1.0.2n/bin/":$PATH
 PATH="/usr/local/opt/icu4c/bin:$PATH"
 PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/user37287304/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/user37287304/Downloads/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/user37287304/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/user37287304/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
 export PATH="$HOME/.npm-packages/bin:$PATH"
