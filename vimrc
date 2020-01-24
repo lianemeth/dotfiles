@@ -23,6 +23,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-rails'
+Plugin 'pangloss/vim-javascript'
+Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'stephpy/vim-yaml'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'ngmy/vim-rubocop'
 call vundle#end()
 filetype plugin indent on
 
@@ -38,6 +45,9 @@ syntax on
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
 set background=dark
+
+" Needed for % matching on ruby
+packadd matchit
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
