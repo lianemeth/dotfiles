@@ -23,8 +23,21 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'nvie/vim-flake8'
+Plugin 'chrisbra/vim-commentary'
+Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'stephpy/vim-yaml'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'python-mode/python-mode'
+
 call vundle#end()
 filetype plugin indent on
+packadd! matchit
 
 " Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
